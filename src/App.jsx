@@ -1,24 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Wishlist from './pages/Wishlist.jsx';
 import Auth from './pages/Auth.jsx';
+import Welcome from './pages/Welcome.jsx';
+import WishlistDetail from './pages/WishlistDetail.jsx';
 import { auth } from './firebase';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import { ToastContainer } from 'react-toastify';
-import WishlistDetail from './pages/WishlistDetail.jsx';
 
 function App() {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
+      if (currentUser) {
+        navigate('/wishlist');
+      }
     });
     return () => unsubscribe();
-  }, []);
+  }, [navigate]);
 
-  const handleLogout = () => signOut(auth);
+  const handleLogout = () => {
+    signOut(auth);
+    navigate('/');
+  };
 
   return (
     <>
@@ -40,7 +48,8 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Welcome />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/wishlist/:wishlistId" element={<WishlistDetail />} />
         <Route path="/auth" element={<Auth />} />

@@ -22,7 +22,7 @@ A React-based wishlist application that allows users to create, manage, and shar
   - Mock invite system to simulate sharing wishlists with others
 
 - **Real-Time Sync** *(Bonus)*  
-  - Firebase Firestore used for instant updates across sessions
+  - Firebase Firestore is used for instant updates across sessions
 
 - **Responsive Design**  
   - Mobile and tablet-friendly UI
@@ -35,7 +35,7 @@ A React-based wishlist application that allows users to create, manage, and shar
 | Frontend     | React + Vite               |
 | Authentication | Firebase Auth            |
 | Database     | Firebase Firestore (NoSQL) |
-| Hosting      | Github pages               |     |
+| Hosting      | Github pages               |     
 | Styling      | Tailwind CSS               |
 
 ## Project Structure
@@ -70,13 +70,12 @@ A React-based wishlist application that allows users to create, manage, and shar
 - Database: Firestore or Realtime Database
 - Firebase config is located in src/firebase.js and includes:
 
-## firebase configuration:
-* import { initializeApp } "from firebase/app";
-* import { getAuth } from "firebase/auth";
-
-* const firebaseConfig = { ... };
-* const app = initializeApp(firebaseConfig);
-* export const auth = getAuth(app);
+## Firebase configuration:
+`import { initializeApp } "from firebase/app";`
+`import { getAuth } from "firebase/auth";`
+`const firebaseConfig = { ... };`
+`const app = initializeApp(firebaseConfig);`
+`export const auth = getAuth(app);`
 
 ## Routing
 
@@ -84,14 +83,14 @@ A React-based wishlist application that allows users to create, manage, and shar
 * Deployment - GitHub Pages
 * Deployed using GitHub Pages by building to the docs/ folder.
 * Homepage in package.json:
-* "homepage": "https://<your-username>.github.io/wishlist-client-app"
+* "homepage": `"https://anushajampula.github.io/shared-wishlist-app"`
 
 ## Deployment Commands:
 
-`"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d docs"
-}`
+`"scripts": {`
+  `"predeploy": "npm run build",`
+  `"deploy": "gh-pages -d docs"`
+`}`
 
 ** To Deploy:
 - `npm run build`
@@ -100,26 +99,26 @@ A React-based wishlist application that allows users to create, manage, and shar
 ## Setup Instructions
 
 1. Clone the repository:
-- git clone https://github.com/your-username/wishlist-client-app.git
+`git clone https://github.com/anushajampula/shared-wishlist-app.git`
 
 2. Firebase Setup
 
-- Create a Firebase project at https://console.firebase.google.com
-- Enable Authentication > Email/Password
-- Enable Cloud Firestore
-- Copied the firebase configuration and stored it in .env
+- `Create a Firebase project at https://console.firebase.google.com`
+- `Enable Authentication > Email/Password`
+- `Enable Cloud Firestore`
+- `Copied the Firebase configuration and stored it in .env`
 
 3. Install dependencies:
-- npm install
+ `npm install`
 
 4. Start the development server:
-- npm run dev
+ `npm run dev`
 
 5. Build for production:
-- npm run build
+   `npm run build`
 
 6. Deploy to GitHub Pages:
-- npm run deploy
+ `npm run deploy`
 
 
 

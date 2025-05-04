@@ -77,7 +77,7 @@ A React-based wishlist application that allows users to create, manage, and shar
 `const app = initializeApp(firebaseConfig);`
 `export const auth = getAuth(app);`
 
-## Routing
+## Routing:
 
 * Handled using react-router-dom with the following paths:
 * Deployment - GitHub Pages
@@ -96,12 +96,12 @@ A React-based wishlist application that allows users to create, manage, and shar
 - `npm run build`
 - `npm run deploy`
 
-## Setup Instructions
+## Setup Instructions:
 
 1. Clone the repository:
 `git clone https://github.com/anushajampula/shared-wishlist-app.git`
 
-2. Firebase Setup
+2. Firebase Setup:
 
 - `Create a Firebase project at https://console.firebase.google.com`
 - `Enable Authentication > Email/Password`

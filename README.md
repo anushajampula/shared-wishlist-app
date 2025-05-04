@@ -71,31 +71,31 @@ A React-based wishlist application that allows users to create, manage, and shar
 - Firebase config is located in src/firebase.js and includes:
 
 ## firebase configuration:
-import { initializeApp } "from firebase/app";
-import { getAuth } from "firebase/auth";
+* import { initializeApp } "from firebase/app";
+* import { getAuth } from "firebase/auth";
 
-const firebaseConfig = { ... };
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+* const firebaseConfig = { ... };
+* const app = initializeApp(firebaseConfig);
+* export const auth = getAuth(app);
 
 ## Routing
 
-*Handled using react-router-dom with the following paths:
-*Deployment - GitHub Pages
-*Deployed using GitHub Pages by building to the docs/ folder.
-*Homepage in package.json:
-*"homepage": "https://<your-username>.github.io/wishlist-client-app"
+* Handled using react-router-dom with the following paths:
+* Deployment - GitHub Pages
+* Deployed using GitHub Pages by building to the docs/ folder.
+* Homepage in package.json:
+* "homepage": "https://<your-username>.github.io/wishlist-client-app"
 
 ## Deployment Commands:
 
-"scripts": {
+`"scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d docs"
-}
+}`
 
 ** To Deploy:
-npm run build
-npm run deploy
+- `npm run build`
+- `npm run deploy`
 
 ## Setup Instructions
 
